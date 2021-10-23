@@ -15,7 +15,7 @@ private CardView card1;
         setContentView(R.layout.activity_available);
 
 
-        card1=(CardView)findViewById(R.id.card1);
+        card1=(CardView)findViewById(R.id.card20);
         card1.setOnClickListener((View.OnClickListener) this);
 
     }

@@ -150,8 +150,7 @@ private  NavigationView navigation;
 
         switch (view.getId()){
             case R.id.card1:
-                startActivity(new Intent(this, C_Home.class));
-                break;
+                startActivity(new Intent(this, Operator.class));
 
 
         }

@@ -20,7 +20,7 @@ Button button;
 
     @Override
     public void onClick(View view) {
-        startActivity(new Intent(this, courses.class));
+        startActivity(new Intent(this, CPP_Home.class));
 
     }
 }
