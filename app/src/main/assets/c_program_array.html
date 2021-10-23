@@ -1,0 +1,45 @@
+<pre>
+<strong>Array-</strong>
+
+#include &lt;stdio.h&gt;
+
+int main()
+{
+&nbsp; &nbsp; int i,first,last,middle,n,element,array[100];
+&nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; // read number of elements&nbsp;
+&nbsp; &nbsp; printf(&quot;Enter number of elements to enter in the array (max 100):&quot;);
+&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;n);
+&nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; // input elements in the array
+&nbsp; &nbsp; printf(&quot;Enter %d elements one by one in ascending order:\n&quot;,n);
+&nbsp; &nbsp; for(i=0;i&lt;n;i++)
+&nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;array[i]);
+&nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; // read element to search for
+&nbsp; &nbsp; printf(&quot;Enter the element to be searched in the array:&quot;);
+&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;element);
+&nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; // algorithm for binary search
+&nbsp; &nbsp; first = 0;
+&nbsp; &nbsp; last = n-1;
+&nbsp; &nbsp; middle = (first+last)/2;
+&nbsp; &nbsp;&nbsp;
+&nbsp; &nbsp; while(first&lt;=last){
+&nbsp; &nbsp; &nbsp; &nbsp; if(element &gt; array[middle])
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; first = middle+1;
+&nbsp; &nbsp; &nbsp; &nbsp; else if(element &lt; array[middle])
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; last = middle-1;
+&nbsp; &nbsp; &nbsp; &nbsp; else{
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d found at position %d&quot;,element,middle+1);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; &nbsp; &nbsp; middle = (first+last)/2;
+&nbsp; &nbsp; }
+&nbsp; &nbsp; if(first&gt;last)
+&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d not found in the array!&quot;,element);
+
+&nbsp; &nbsp; return 0;
+}</pre>
+
+<p>&nbsp;</p>

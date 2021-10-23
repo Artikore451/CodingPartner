@@ -1,0 +1,114 @@
+<p style="text-align: center;"><strong>UNION</strong></p>
+<p><br></p>
+<p>A union is a special data type available in C that allows to store different data types in the same memory location. You can define a union with many members, but only one member can contain a value at any given time. Unions provide an efficient way of using the same memory location for multiple-purpose.</p>
+<p><br></p>
+<p><strong>Defining a Union</strong></p>
+<p>To define a union, you must use the union statement in the same way as you did while defining a structure. The union statement defines a new data type with more than one member for your program. The format of the union statement is as follows &minus;</p>
+<p><br></p>
+<p>union [union tag] {</p>
+<p>&nbsp; &nbsp;member definition;</p>
+<p>&nbsp; &nbsp;member definition;</p>
+<p>&nbsp; &nbsp;...</p>
+<p>&nbsp; &nbsp;member definition;</p>
+<p>} [one or more union variables]; &nbsp;</p>
+<p>The union tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the union&apos;s definition, before the final semicolon, you can specify one or more union variables but it is optional. Here is the way you would define a union type named Data having three members i, f, and str &minus;</p>
+<p><br></p>
+<p>union Data {</p>
+<p>&nbsp; &nbsp;int i;</p>
+<p>&nbsp; &nbsp;float f;</p>
+<p>&nbsp; &nbsp;char str[20];</p>
+<p>} data; &nbsp;</p>
+<p>Now, a variable of Data type can store an integer, a floating-point number, or a string of characters. It means a single variable, i.e., same memory location, can be used to store multiple types of data. You can use any built-in or user defined data types inside a union based on your requirement.</p>
+<p><br></p>
+<p>The memory occupied by a union will be large enough to hold the largest member of the union. For example, in the above example, Data type will occupy 20 bytes of memory space because this is the maximum space which can be occupied by a character string. The following example displays the total memory size occupied by the above union &minus;</p>
+<p><br></p>
+<p><br></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>&nbsp;</p>
+<p>union Data {</p>
+<p>&nbsp; &nbsp;int i;</p>
+<p>&nbsp; &nbsp;float f;</p>
+<p>&nbsp; &nbsp;char str[20];</p>
+<p>};</p>
+<p>&nbsp;</p>
+<p>int main( ) {</p>
+<p><br></p>
+<p>&nbsp; &nbsp;union Data data; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br></p>
+<p>&nbsp; &nbsp;printf( &quot;Memory size occupied by data : %d\n&quot;, sizeof(data));</p>
+<p><br></p>
+<p>&nbsp; &nbsp;return 0;</p>
+<p>}</p>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<p><br></p>
+<p>Memory size occupied by data : 20</p>
+<p><br></p>
+<p><strong>Accessing Union Members</strong></p>
+<p>To access any member of a union, we use the member access operator (.). The member access operator is coded as a period between the union variable name and the union member that we wish to access. You would use the keyword union to define variables of union type. The following example shows how to use unions in a program &minus;</p>
+<p><br></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>&nbsp;</p>
+<p>union Data {</p>
+<p>&nbsp; &nbsp;int i;</p>
+<p>&nbsp; &nbsp;float f;</p>
+<p>&nbsp; &nbsp;char str[20];</p>
+<p>};</p>
+<p>&nbsp;</p>
+<p>int main( ) {</p>
+<p><br></p>
+<p>&nbsp; &nbsp;union Data data; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br></p>
+<p>&nbsp; &nbsp;data.i = 10;</p>
+<p>&nbsp; &nbsp;data.f = 220.5;</p>
+<p>&nbsp; &nbsp;strcpy( data.str, &quot;C Programming&quot;);</p>
+<p><br></p>
+<p>&nbsp; &nbsp;printf( &quot;data.i : %d\n&quot;, data.i);</p>
+<p>&nbsp; &nbsp;printf( &quot;data.f : %f\n&quot;, data.f);</p>
+<p>&nbsp; &nbsp;printf( &quot;data.str : %s\n&quot;, data.str);</p>
+<p><br></p>
+<p>&nbsp; &nbsp;return 0;</p>
+<p>}</p>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<p><br></p>
+<p>data.i : 1917853763</p>
+<p>data.f : 4122360580327794860452759994368.000000</p>
+<p>data.str : C Programming</p>
+<p>Here, we can see that the values of i and f members of union got corrupted because the final value assigned to the variable has occupied the memory location and this is the reason that the value of str member is getting printed very well.</p>
+<p><br></p>
+<p>Now let&apos;s look into the same example once again where we will use one variable at a time which is the main purpose of having unions &minus;</p>
+<p><br></p>
+<p><br></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>&nbsp;</p>
+<p>union Data {</p>
+<p>&nbsp; &nbsp;int i;</p>
+<p>&nbsp; &nbsp;float f;</p>
+<p>&nbsp; &nbsp;char str[20];</p>
+<p>};</p>
+<p>&nbsp;</p>
+<p>int main( ) {</p>
+<p><br></p>
+<p>&nbsp; &nbsp;union Data data; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p><br></p>
+<p>&nbsp; &nbsp;data.i = 10;</p>
+<p>&nbsp; &nbsp;printf( &quot;data.i : %d\n&quot;, data.i);</p>
+<p>&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp;data.f = 220.5;</p>
+<p>&nbsp; &nbsp;printf( &quot;data.f : %f\n&quot;, data.f);</p>
+<p>&nbsp; &nbsp;</p>
+<p>&nbsp; &nbsp;strcpy( data.str, &quot;C Programming&quot;);</p>
+<p>&nbsp; &nbsp;printf( &quot;data.str : %s\n&quot;, data.str);</p>
+<p><br></p>
+<p>&nbsp; &nbsp;return 0;</p>
+<p>}</p>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<p><br></p>
+<p>data.i : 10</p>
+<p>data.f : 220.500000</p>
+<p>data.str : C Programming</p>
+<p>Here, all the members are getting printed very well because one member is being used at a time.</p>
+<p><br></p>
+<p><br></p>

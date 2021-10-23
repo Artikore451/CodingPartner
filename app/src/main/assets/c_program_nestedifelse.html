@@ -1,0 +1,28 @@
+<p style="text-align: center;"><strong>nested-if in C-</strong></p>
+
+<p><br />
+// C program to illustrate nested-if statement<br />
+#include &lt;stdio.h&gt;<br />
+&nbsp;<br />
+int main() {<br />
+&nbsp; &nbsp; int i = 10;<br />
+&nbsp;<br />
+&nbsp; &nbsp; if (i == 10)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; // First if statement<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (i &lt; 15)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;printf(&quot;i is smaller than 15\n&quot;);<br />
+&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; // Nested - if statement<br />
+&nbsp; &nbsp; &nbsp; &nbsp; // Will only be executed if statement above<br />
+&nbsp; &nbsp; &nbsp; &nbsp; // is true<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if (i &lt; 12)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;i is smaller than 12 too\n&quot;);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; else<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;i is greater than 15&quot;);<br />
+&nbsp; &nbsp; }<br />
+&nbsp;<br />
+&nbsp; &nbsp; return 0;<br />
+}</p>
+
+<p>&nbsp;</p>

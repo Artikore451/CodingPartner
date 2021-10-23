@@ -1,0 +1,20 @@
+<pre>
+<strong>String-
+
+</strong>/* c program to find Length of string without strlen()*/
+#include &lt;stdio.h&gt;
+int main()
+{
+&nbsp; &nbsp; char str[1000]; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // character array to store string &nbsp;
+&nbsp; &nbsp; int i;
+
+&nbsp; &nbsp; printf(&quot;Enter a string:\n&quot;);
+&nbsp; &nbsp; fgets(str, 1000, stdin); &nbsp; &nbsp; &nbsp;// Read string from stdin, of maximum Length 1000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+&nbsp; &nbsp; for(i = 0; str[i] != &#39;\0&#39;; i++); // &#39;\0&#39; end of string
+
+&nbsp; &nbsp; printf(&quot;Length of string: %d&quot;, i);
+&nbsp; &nbsp; return 0;
+}</pre>
+
+<p>&nbsp;</p>

@@ -1,0 +1,45 @@
+<pre>
+<strong>Structure-
+
+</strong>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+&nbsp;
+struct book
+{
+&nbsp;&nbsp; &nbsp;char name[40];
+&nbsp;&nbsp; &nbsp;char author[40];
+&nbsp;&nbsp; &nbsp;int pages;
+&nbsp;&nbsp; &nbsp;float price;
+};//Structure for book
+&nbsp;
+void main(void)
+{
+&nbsp;&nbsp; &nbsp;int a, b, c, data=0, match, len;
+&nbsp;&nbsp; &nbsp;char author[40];
+&nbsp;&nbsp; &nbsp;struct book bk[]=
+&nbsp;&nbsp; &nbsp;{
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{&quot;C Programming&quot;, &quot;Kanetkar&quot;, 728, 100.10},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{&quot;Basic Electronics&quot;, &quot;Afiq&quot;, 280, 140.50},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{&quot;Digital Electronics&quot;, &quot;Hakim&quot;, 200, 80.50},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{&quot;Eng.Mathematics&quot;, &quot;Hazim&quot;, 407, 70.00},
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{&quot;Statistics in Eng.&quot;, &quot;Hadi&quot;, 378, 215.99}
+&nbsp;&nbsp; &nbsp;};//Initialize the array of structure
+&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;printf(&quot;Please type in author&#39;s name:&quot;);
+&nbsp;&nbsp; &nbsp;scanf(&quot;%s&quot;, author);
+&nbsp;&nbsp; &nbsp;for(a=0; a &lt; 5; a++)
+&nbsp;&nbsp; &nbsp;{
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;if(strcmp(author, bk[a].author)==0)
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;printf(&quot;The book you&#39;re looking for:%s\n&quot;, bk[a].name);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;printf(&quot;Author&#39;s name is:%s\n&quot;, bk[a].author);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;printf(&quot;Number of pages is:%d\n&quot;, bk[a].pages);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;printf(&quot;The Price is:%.2f\n&quot;, bk[a].price);
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;data=1;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;if(data == 0)
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;printf(&quot;Sorry, the book is not in the database\n&quot;);
+}</pre>
+
+<p>&nbsp;</p>

@@ -1,0 +1,79 @@
+<p style="text-align: center;"><strong>CONDITIONS IN C</strong></p>
+<p style="text-align: left;"><strong>What is a Conditional Statement in C?</strong></p>
+<p style="text-align: left;">&nbsp;Conditional Statements in C programming are used to make decisions based on the conditions. Conditional statements execute sequentially when there is no condition around the statements. If you put some condition for a block of statements, the execution flow may change based on the result evaluated by the condition. This process is called decision making in &lsquo;C.&rsquo;&nbsp;</p>
+<p style="text-align: left;">In &lsquo;C&rsquo; programming conditional statements are possible with the help of the following two constructs:</p>
+<p style="text-align: left;">&nbsp;1. If statement&nbsp;</p>
+<p style="text-align: left;">2. If-else statement&nbsp;</p>
+<p style="text-align: left;"><br></p>
+<p style="text-align: left;"><strong>If statement</strong></p>
+<p style="text-align: left;">&nbsp;It is one of the powerful conditional statement. If statement is responsible for modifying the flow of execution of a program. If statement is always used with a condition. The condition is evaluated first before executing any statement inside the body of If.&nbsp;</p>
+<p style="text-align: left;">The syntax for if statement is as follows:</p>
+<p style="text-align: left;">&nbsp;if (condition)</p>
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;instruction;</p>
+<p style="text-align: left;">&nbsp;The condition evaluates to either true or false. True is always a non-zero value, and false is a value that contains zero. Instructions can be a single instruction or a code block enclosed by curly braces { }.&nbsp;</p>
+<p style="text-align: left;">Following program illustrates the use of if construct in &lsquo;C&rsquo; programming:&nbsp;</p>
+<p style="text-align: left;">#include &lt;stdio.h&gt;</p>
+<p style="text-align: left;">int main() {</p>
+<p style="text-align: left;">int num1=1;</p>
+<p style="text-align: left;">int num2=2;</p>
+<p style="text-align: left;">if(num1&lt;num2){</p>
+<p style="text-align: left;">printf(&quot;num1 is smaller than num2&quot;);</p>
+<p style="text-align: left;">}</p>
+<p style="text-align: left;">return 0;</p>
+<p style="text-align: left;">}</p>
+<p style="text-align: left;"><strong>OUTPUT:</strong></p>
+<p style="text-align: left;">num1 is smaller than num2</p>
+<p><br></p>
+<p><strong>The If-Else statement</strong></p>
+<p><br></p>
+<p>The if-else is statement is an extended version of If. The general form of if-else is as follows:</p>
+<p><br></p>
+<p>if (test-expression)</p>
+<p>{</p>
+<p>&nbsp; &nbsp; True block of statements</p>
+<p>}</p>
+<p>Else</p>
+<p>{</p>
+<p>&nbsp; &nbsp; False block of statements</p>
+<p>}</p>
+<p>Statements;</p>
+<p>n this type of a construct, if the value of test-expression is true, then the true block of statements will be executed. If the value of test-expression if false, then the false block of statements will be executed. In any case, after the execution, the control will be automatically transferred to the statements appearing outside the block of If.</p>
+<p><br></p>
+<p>Following programs illustrate the use of the if-else construct:</p>
+<p>We will initialize a variable with some value and write a program to determine if the value is less than ten or greater than ten. Let&rsquo;s start.</p>
+<p>&nbsp;#include &lt;stdio.h&gt;</p>
+<p>int main() {&nbsp;</p>
+<p>int num=19;</p>
+<p>&nbsp;if(num&lt;10) {</p>
+<p>&nbsp; &nbsp; &nbsp;printf(&quot;The value is less than 10&quot;);&nbsp;</p>
+<p>} else&nbsp;</p>
+<p>{</p>
+<p>&nbsp; &nbsp;printf(&quot;The value is greater than 10&quot;);</p>
+<p>&nbsp;}</p>
+<p>&nbsp;return 0;&nbsp;</p>
+<p>}&nbsp;</p>
+<p><br></p>
+<p><strong>Output:&nbsp;</strong></p>
+<p>The value is greater than 10&nbsp;</p>
+<p><br></p>
+<p><strong>Nested If-else Statements&nbsp;</strong></p>
+<p>When a series of decision is required, nested if-else is used. Nesting means using one if-else construct within another one.&nbsp;</p>
+<p>Let&rsquo;s write a program to illustrate the use of nested if-else.</p>
+<p>&nbsp;#include &lt;stdio.h&gt;</p>
+<p>int main() {&nbsp;</p>
+<p>int num=1;</p>
+<p>&nbsp;if(num&lt;10) {</p>
+<p>&nbsp;if(num==1) {&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; printf(&quot;The value is:%d\n&quot;,num);&nbsp;</p>
+<p>} else</p>
+<p>&nbsp;{&nbsp;</p>
+<p>&nbsp; printf(&quot;The value is greater than 1&quot;);</p>
+<p>&nbsp;}</p>
+<p>&nbsp;} else&nbsp;</p>
+<p>{</p>
+<p>&nbsp;printf(&quot;The value is greater than 10&quot;);&nbsp;</p>
+<p>}&nbsp;</p>
+<p>return 0;</p>
+<p>&nbsp;}</p>
+<p><br></p>
+<p><strong>&nbsp;Output</strong>: The value is:1 </p>

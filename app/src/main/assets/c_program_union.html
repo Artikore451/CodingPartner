@@ -1,0 +1,67 @@
+<pre>
+<strong>Union-
+
+</strong>// Comparison of Structures and Unions
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;&nbsp;
+
+struct sIDCard {
+&nbsp; &nbsp;char Branch[24];
+&nbsp; &nbsp;char Name[20];
+&nbsp; &nbsp;int RegNo;
+&nbsp; &nbsp;int RollNo;
+} ID_s;
+
+union uIDCard {
+&nbsp; &nbsp;char Branch[24];
+&nbsp; &nbsp;char Name[20];
+&nbsp; &nbsp;int RegNo;
+&nbsp; &nbsp;int RollNo;
+} ID_u;
+
+void main() {
+&nbsp; &nbsp;// &nbsp;STRUCTURE
+&nbsp; &nbsp;printf(&quot;\nFrom Structure\n**********************&quot;);
+&nbsp; &nbsp;
+&nbsp; &nbsp;strcpy( ID_s.Branch, &quot;R&amp;A&quot;);
+&nbsp; &nbsp;strcpy(ID_s.Name, &quot;Aakash Paul K&quot;);
+&nbsp; &nbsp;ID_s.RegNo = 525;
+&nbsp; &nbsp;ID_s.RollNo = 1;
+&nbsp; &nbsp;
+&nbsp; &nbsp;printf(&quot;\nBranch\t: %s&quot;, ID_s.Branch);
+&nbsp; &nbsp;printf(&quot;\nName\t: %s&quot;, ID_s.Name);
+&nbsp; &nbsp;printf(&quot;\nReg No\t: %d&quot;, ID_s.RegNo);
+&nbsp; &nbsp;printf(&quot;\nRoll No\t: %d&quot;, ID_s.RollNo);
+
+&nbsp; &nbsp;// &nbsp;UNION
+&nbsp; &nbsp;printf(&quot;\n\nFrom Union\n**********************&quot;);
+&nbsp; &nbsp;
+&nbsp; &nbsp;strcpy( ID_u.Branch, &quot;R&amp;A&quot;);
+&nbsp; &nbsp;strcpy(ID_u.Name, &quot;Aakash Paul K&quot;);
+&nbsp; &nbsp;ID_u.RegNo = 525;
+&nbsp; &nbsp;ID_u.RollNo = 1;
+&nbsp; &nbsp;
+&nbsp; &nbsp;printf(&quot;\nBranch\t: %s&quot;, ID_u.Branch);
+&nbsp; &nbsp;printf(&quot;\nName\t: %s&quot;, ID_u.Name);
+&nbsp; &nbsp;printf(&quot;\nReg No\t: %d&quot;, ID_u.RegNo);
+&nbsp; &nbsp;printf(&quot;\nRoll No\t: %d&quot;, ID_u.RollNo);
+&nbsp; &nbsp;
+&nbsp; &nbsp;// &nbsp;UNION - Storing one by one and printing
+&nbsp; &nbsp;printf(&quot;\n\nFrom Union - One by one - read and print&quot;);
+&nbsp; &nbsp;printf(&quot;\n*********************************************&quot;);
+&nbsp; &nbsp;
+&nbsp; &nbsp;strcpy( ID_u.Branch, &quot;R&amp;A&quot;);
+&nbsp; &nbsp;printf(&quot;\nBranch\t: %s&quot;, ID_u.Branch);
+&nbsp; &nbsp;strcpy(ID_u.Name, &quot;Aakash Paul K&quot;);
+&nbsp; &nbsp;printf(&quot;\nName\t: %s&quot;, ID_u.Name);
+&nbsp; &nbsp;ID_u.RegNo = 525;
+&nbsp; &nbsp;printf(&quot;\nReg No\t: %d&quot;, ID_u.RegNo);
+&nbsp; &nbsp;ID_u.RollNo = 1;
+&nbsp; &nbsp;printf(&quot;\nRoll No\t: %d&quot;, ID_u.RollNo);
+&nbsp; &nbsp;
+&nbsp; &nbsp;// &nbsp;SIZE OF STRUCTURE &amp; UNION
+&nbsp; &nbsp;printf(&quot;\n\nSize of structure variable ID_s : %ld&quot;, sizeof(ID_s));
+&nbsp; &nbsp;printf(&quot;\nSize of Union variable ID_u \t: %ld&quot;, sizeof(ID_u));
+}</pre>
+
+<p>&nbsp;</p>

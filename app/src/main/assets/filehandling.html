@@ -1,0 +1,31 @@
+<form name="Calc">
+<p style="text-align: center;"><strong>FILE HANDLING</strong></p>
+
+<p>File Handling in C<br />
+In programming, we may require some specific input data to be generated several numbers of times. Sometimes, it is not enough to only display the data on the console. The data to be displayed may be very large, and only a limited amount of data can be displayed on the console, and since the memory is volatile, it is impossible to recover the programmatically generated data again and again. However, if we need to do so, we may store it onto the local file system which is volatile and can be accessed every time. Here, comes the need of file handling in C.</p>
+
+<p>File handling in C enables us to create, update, read, and delete the files stored on the local file system through our C program. The following operations can be performed on a file.</p>
+
+<p>Creation of the new file<br />
+Opening an existing file<br />
+Reading from the file<br />
+Writing to the file<br />
+Deleting the file</p>
+
+<p><strong>Opening File: fopen()</strong><br />
+We must open a file before it can be read, write, or update. The fopen() function is used to open a file. The syntax of the fopen() is given below.</p>
+
+<p>FILE *fopen( const char * filename, const char * mode ); &nbsp;<br />
+The fopen() function accepts two parameters:</p>
+
+<p>The file name (string). If the file is stored at some specific location, then we must mention the path at which the file is stored. For example, a file name can be like &quot;c://some_folder/some_file.ext&quot;.<br />
+The mode in which the file is to be opened. It is a string.</p>
+
+<p><br />
+<strong>Closing File: fclose()</strong><br />
+The fclose() function is used to close a file. The file must be closed after performing all the operations on it. The syntax of fclose() function is given below:</p>
+
+<p>int fclose( FILE *fp ); &nbsp;</p>
+</form>
+
+<p>&nbsp;</p>

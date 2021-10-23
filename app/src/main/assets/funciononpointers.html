@@ -1,0 +1,82 @@
+
+
+
+
+9.2)<form name="Calc">
+<p style="text-align: center;">FUNCTION ON POINTER</p>
+
+<p>C programming allows passing a pointer to a function. To do so, simply declare the function parameter as a pointer type.</p>
+
+<p>Following is a simple example where we pass an unsigned long pointer to a function and change the value inside the function which reflects back in the calling function &minus;</p>
+
+<p>Live Demo<br />
+#include &lt;stdio.h&gt;<br />
+#include &lt;time.h&gt;<br />
+&nbsp;<br />
+void getSeconds(unsigned long *par);</p>
+
+<p>int main () {</p>
+
+<p>&nbsp; &nbsp;unsigned long sec;<br />
+&nbsp; &nbsp;getSeconds( &amp;sec );</p>
+
+<p>&nbsp; &nbsp;/* print the actual value */<br />
+&nbsp; &nbsp;printf(&quot;Number of seconds: %ld\n&quot;, sec );</p>
+
+<p>&nbsp; &nbsp;return 0;<br />
+}</p>
+
+<p>void getSeconds(unsigned long *par) {<br />
+&nbsp; &nbsp;/* get the current number of seconds */<br />
+&nbsp; &nbsp;*par = time( NULL );<br />
+&nbsp; &nbsp;return;<br />
+}<br />
+When the above code is compiled and executed, it produces the following result &minus;</p>
+
+<p>Number of seconds :1294450468<br />
+The function, which can accept a pointer, can also accept an array as shown in the following example &minus;</p>
+
+<p><br />
+#include &lt;stdio.h&gt;<br />
+&nbsp;<br />
+/* function declaration */<br />
+double getAverage(int *arr, int size);<br />
+&nbsp;<br />
+int main () {</p>
+
+<p>&nbsp; &nbsp;/* an int array with 5 elements */<br />
+&nbsp; &nbsp;int balance[5] = {1000, 2, 3, 17, 50};<br />
+&nbsp; &nbsp;double avg;<br />
+&nbsp;<br />
+&nbsp; &nbsp;/* pass pointer to the array as an argument */<br />
+&nbsp; &nbsp;avg = getAverage( balance, 5 ) ;<br />
+&nbsp;<br />
+&nbsp; &nbsp;/* output the returned value &nbsp;*/<br />
+&nbsp; &nbsp;printf(&quot;Average value is: %f\n&quot;, avg );<br />
+&nbsp; &nbsp;return 0;<br />
+}</p>
+
+<p>double getAverage(int *arr, int size) {</p>
+
+<p>&nbsp; &nbsp;int &nbsp;i, sum = 0; &nbsp; &nbsp; &nbsp;&nbsp;<br />
+&nbsp; &nbsp;double avg; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp;<br />
+&nbsp; &nbsp;for (i = 0; i &lt; size; ++i) {<br />
+&nbsp; &nbsp; &nbsp; sum += arr[i];<br />
+&nbsp; &nbsp;}<br />
+&nbsp;<br />
+&nbsp; &nbsp;avg = (double)sum / size;<br />
+&nbsp; &nbsp;return avg;<br />
+}<br />
+When the above code is compiled together and executed, it produces the following result &minus;</p>
+
+<p>Average value is: 214.40000<br />
+&nbsp;</p>
+</form>
+
+<p>&nbsp;</p>
+
+
+
+
+

@@ -1,0 +1,38 @@
+<pre>
+<strong>File handling-
+</strong>
+//#include &lt;cstdlib&gt;&nbsp;&nbsp; &nbsp;// for the definition of EXIT_FAILURE
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt;
+using namespace std;
+
+// Associate stream objects with external file names
+
+int main() {
+
+&nbsp;&nbsp; &nbsp;//*** Writting to a file ***/
+&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;ofstream myfile; // outs is an output stream&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;myfile.open(&quot;Test.txt&quot;); // connect outs to file outFile
+&nbsp;&nbsp; &nbsp;myfile &lt;&lt; &quot;Writing this to a file.\n&quot;;
+&nbsp;&nbsp; &nbsp;myfile &lt;&lt; &quot;Writing second line to a file.\n&quot;;
+&nbsp;&nbsp; &nbsp;myfile.close();&nbsp;&nbsp; &nbsp;// close output file stream
+
+
+&nbsp;&nbsp; &nbsp;//*** Reading from a file ***/
+&nbsp;&nbsp; &nbsp;string line;
+&nbsp;&nbsp; &nbsp;ifstream myfilein; // myfilein is an input stream&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;myfilein.open(&quot;Test.txt&quot;); // connect myfilein to file Input File
+&nbsp;&nbsp; &nbsp;if (myfilein.is_open())
+&nbsp;&nbsp; &nbsp;{
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;while (getline(myfilein, line))
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;{
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;cout &lt;&lt; line &lt;&lt; &#39;\n&#39;;
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;myfile.close();&nbsp;&nbsp; &nbsp;// close output file stream
+&nbsp;&nbsp; &nbsp;}
+&nbsp;&nbsp; &nbsp;return 0;&nbsp;&nbsp; &nbsp;// successful return
+}</pre>
+
+<p>&nbsp;</p>

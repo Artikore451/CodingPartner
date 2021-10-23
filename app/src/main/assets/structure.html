@@ -1,0 +1,98 @@
+<p style="text-align: center;"><strong>STRUCTURE</strong></p>
+<p><br></p>
+<p><strong>Why use structure?</strong></p>
+<p>In C, there are cases where we need to store multiple attributes of an entity. It is not necessary that an entity has all the information of one type only. It can have different attributes of different data types. For example, an entity Student may have its name (string), roll number (int), marks (float). To store such type of information regarding an entity student, we have the following approaches:</p>
+<p><br></p>
+<p>Construct individual arrays for storing names, roll numbers, and marks.</p>
+<p>Use a special data structure to store the collection of different data types.</p>
+<p>Let&apos;s look at the first approach in detail.</p>
+<p><br></p>
+<p>#include&lt;stdio.h&gt; &nbsp;</p>
+<p>void main () &nbsp;</p>
+<p>{ &nbsp;</p>
+<p>&nbsp; char names[2][10],dummy; // 2-dimensioanal character array names is used to store the names of the students &nbsp;&nbsp;</p>
+<p>&nbsp; int roll_numbers[2],i; &nbsp;</p>
+<p>&nbsp; float marks[2]; &nbsp;</p>
+<p>&nbsp; for (i=0;i&lt;3;i++) &nbsp;</p>
+<p>&nbsp; { &nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp;&nbsp;</p>
+<p>&nbsp; &nbsp; printf(&quot;Enter the name, roll number, and marks of the student %d&quot;,i+1); &nbsp;</p>
+<p>&nbsp; &nbsp; scanf(&quot;%s %d %f&quot;,&amp;names[i],&amp;roll_numbers[i],&amp;marks[i]); &nbsp;</p>
+<p>&nbsp; &nbsp; scanf(&quot;%c&quot;,&amp;dummy); // enter will be stored into dummy character at each iteration &nbsp;</p>
+<p>&nbsp; } &nbsp;</p>
+<p>&nbsp; printf(&quot;Printing the Student details ...\n&quot;); &nbsp;</p>
+<p>&nbsp; for (i=0;i&lt;3;i++) &nbsp;</p>
+<p>&nbsp; { &nbsp;</p>
+<p>&nbsp; &nbsp; printf(&quot;%s %d %f\n&quot;,names[i],roll_numbers[i],marks[i]); &nbsp;</p>
+<p>&nbsp; } &nbsp;</p>
+<p>} &nbsp;</p>
+<p><strong>Output</strong></p>
+<p>Enter the name, roll number, and marks of the student 1Arun 90 91 &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Enter the name, roll number, and marks of the student 2Varun 91 56 &nbsp; &nbsp; &nbsp;</p>
+<p>Enter the name, roll number, and marks of the student 3Sham 89 69</p>
+<p><br></p>
+<p>Printing the Student details...</p>
+<p>Arun 90 91.000000 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p>Varun 91 56.000000 &nbsp;</p>
+<p>Sham 89 69.000000</p>
+<p>The above program may fulfill our requirement of storing the information of an entity student. However, the program is very complex, and the complexity increase with the amount of the input. The elements of each of the array are stored contiguously, but all the arrays may not be stored contiguously in the memory. C provides you with an additional and simpler approach where you can use a special data structure, i.e., structure, in which, you can group all the information of different data type regarding an entity.</p>
+<p><br></p>
+<p><br></p>
+<p><strong>What is Structure</strong></p>
+<p>Structure in c is a user-defined data type that enables us to store the collection of different data types. Each element of a structure is called a member. Structures ca; simulate the use of classes and templates as it can store various information</p>
+<p><img src="data:image/jpeg;base64,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"></p>
+<p><br></p>
+<p>The ,struct keyword is used to define the structure. Let&apos;s see the syntax to define the structure in c.</p>
+<p><br></p>
+<p>struct structure_name &nbsp;&nbsp;</p>
+<p>{ &nbsp;</p>
+<p>&nbsp; &nbsp; data_type member1; &nbsp;</p>
+<p>&nbsp; &nbsp; data_type member2; &nbsp;</p>
+<p>&nbsp; &nbsp; . &nbsp;</p>
+<p>&nbsp; &nbsp; . &nbsp;</p>
+<p>&nbsp; &nbsp; data_type memeberN; &nbsp;</p>
+<p>}; &nbsp;</p>
+<p>Let&apos;s see the example to define a structure for an entity employee in c.</p>
+<p><br></p>
+<p>struct employee &nbsp;</p>
+<p>{ &nbsp; int id; &nbsp;</p>
+<p>&nbsp; &nbsp; char name[20]; &nbsp;</p>
+<p>&nbsp; &nbsp; float salary; &nbsp;</p>
+<p>}; &nbsp;</p>
+<p><br></p>
+<p><strong>Declaring structure variable</strong></p>
+<p>We can declare a variable for the structure so that we can access the member of the structure easily. There are two ways to declare structure variable:</p>
+<p><br></p>
+<p>By struct keyword within main() function</p>
+<p>By declaring a variable at the time of defining the structure.</p>
+<p>1st way:</p>
+<p><br></p>
+<p>Let&apos;s see the example to declare the structure variable by struct keyword. It should be declared within the main function.</p>
+<p><br></p>
+<p><br></p>
+<p>struct employee &nbsp;</p>
+<p>{ &nbsp; int id; &nbsp;</p>
+<p>&nbsp; &nbsp; char name[50]; &nbsp;</p>
+<p>&nbsp; &nbsp; float salary; &nbsp;</p>
+<p>}; &nbsp;</p>
+<p>Now write given code inside the main() function.</p>
+<p><br></p>
+<p>struct employee e1, e2; &nbsp;</p>
+<p>The variables e1 and e2 can be used to access the values stored in the structure. Here, e1 and e2 can be treated in the same way as the objects in C++ and Java.</p>
+<p><br></p>
+<p><strong>2nd way:</strong></p>
+<p><br></p>
+<p>Let&apos;s see another way to declare variable at the time of defining the structure.</p>
+<p><br></p>
+<p>struct employee &nbsp;</p>
+<p>{ &nbsp; int id; &nbsp;</p>
+<p>&nbsp; &nbsp; char name[50]; &nbsp;</p>
+<p>&nbsp; &nbsp; float salary; &nbsp;</p>
+<p>}e1,e2; &nbsp;</p>
+<p><br></p>
+<p>Accessing members of the structure</p>
+<p>There are two ways to access structure members:</p>
+<p><br></p>
+<p>By . (member or dot operator)</p>
+<p>By -&gt; (structure pointer operator)</p>
+<p><br></p>

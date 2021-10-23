@@ -1,0 +1,1112 @@
+<form name="Calc">
+<h1 style="text-align: center;">PROGRAMMING IN &ldquo;C&rdquo;</h1>
+
+<h1 style="text-align: center;">By&nbsp;</h1>
+
+<h1 style="text-align: center;">Coding Partner</h1>
+
+<p>&nbsp;</p>
+
+<h2>Object-Oriented Programming</h2>
+
+<p>C++ fully supports object-oriented programming, including the four pillars of object-oriented development &minus;</p>
+
+<ul>
+	<li>Encapsulation</li>
+	<li>Data hiding</li>
+	<li>Inheritance</li>
+	<li>Polymorphism</li>
+</ul>
+
+<h2>Standard Libraries</h2>
+
+<p>Standard C++ consists of three important parts &minus;</p>
+
+<ul>
+	<li>
+	<p>The core language giving all the building blocks including variables, data types and literals, etc.</p>
+	</li>
+	<li>
+	<p>The C++ Standard Library giving a rich set of functions manipulating files, strings, etc.</p>
+	</li>
+	<li>
+	<p>The Standard Template Library (STL) giving a rich set of methods manipulating data structures, etc.</p>
+	</li>
+</ul>
+
+<h2>The ANSI Standard</h2>
+
+<p>The ANSI standard is an attempt to ensure that C++ is portable; that code you write for Microsoft&#39;s compiler will compile without errors, using a compiler on a Mac, UNIX, a Windows box, or an Alpha.</p>
+
+<p>The ANSI standard has been stable for a while, and all the major C++ compiler manufacturers support the ANSI standard.</p>
+
+<h2>C++ Identifiers</h2>
+
+<p>A C++ identifier is a name used to identify a variable, function, class, module, or any other user-defined item. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores, and digits (0 to 9).</p>
+
+<p>C++ does not allow punctuation characters such as @, $, and % within identifiers. C++ is a case-sensitive programming language. Thus,&nbsp;<strong>Manpower</strong>&nbsp;and&nbsp;<strong>manpower</strong>&nbsp;are two different identifiers in C++.</p>
+
+<p>Here are some examples of acceptable identifiers &minus;</p>
+
+<pre>
+mohd       zara    abc   move_name  a_123
+myname50   _temp   j     a23b9      retVal
+</pre>
+
+<h2>C++ Keywords</h2>
+
+<p>The following list shows the reserved words in C++. These reserved words may not be used as constant or variable or any other identifier names.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>asm</td>
+			<td>else</td>
+			<td>new</td>
+			<td>this</td>
+		</tr>
+		<tr>
+			<td>auto</td>
+			<td>enum</td>
+			<td>operator</td>
+			<td>throw</td>
+		</tr>
+		<tr>
+			<td>bool</td>
+			<td>explicit</td>
+			<td>private</td>
+			<td>true</td>
+		</tr>
+		<tr>
+			<td>break</td>
+			<td>export</td>
+			<td>protected</td>
+			<td>try</td>
+		</tr>
+		<tr>
+			<td>case</td>
+			<td>extern</td>
+			<td>public</td>
+			<td>typedef</td>
+		</tr>
+		<tr>
+			<td>catch</td>
+			<td>false</td>
+			<td>register</td>
+			<td>typeid</td>
+		</tr>
+		<tr>
+			<td>char</td>
+			<td>float</td>
+			<td>reinterpret_cast</td>
+			<td>typename</td>
+		</tr>
+		<tr>
+			<td>class</td>
+			<td>for</td>
+			<td>return</td>
+			<td>union</td>
+		</tr>
+		<tr>
+			<td>const</td>
+			<td>friend</td>
+			<td>short</td>
+			<td>unsigned</td>
+		</tr>
+		<tr>
+			<td>const_cast</td>
+			<td>goto</td>
+			<td>signed</td>
+			<td>using</td>
+		</tr>
+		<tr>
+			<td>continue</td>
+			<td>if</td>
+			<td>sizeof</td>
+			<td>virtual</td>
+		</tr>
+		<tr>
+			<td>default</td>
+			<td>inline</td>
+			<td>static</td>
+			<td>void</td>
+		</tr>
+		<tr>
+			<td>delete</td>
+			<td>int</td>
+			<td>static_cast</td>
+			<td>volatile</td>
+		</tr>
+		<tr>
+			<td>do</td>
+			<td>long</td>
+			<td>struct</td>
+			<td>wchar_t</td>
+		</tr>
+		<tr>
+			<td>double</td>
+			<td>mutable</td>
+			<td>switch</td>
+			<td>while</td>
+		</tr>
+		<tr>
+			<td>dynamic_cast</td>
+			<td>namespace</td>
+			<td>template</td>
+			<td>
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h1>Comments in C++</h1>
+
+<p>Program comments are explanatory statements that you can include in the C++ code. These comments help anyone reading the source code. All programming languages allow for some form of comments.</p>
+
+<p>C++ supports single-line and multi-line comments. All characters available inside any comment are ignored by C++ compiler.</p>
+
+<p>C++ comments start with /* and end with */. For example &minus;</p>
+
+<pre>
+/* This is a comment */
+
+/* C++ comments can also
+   * span multiple lines
+*/
+</pre>
+
+<p>A comment can also start with //, extending to the end of the line. For example &minus;</p>
+
+<pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+main() {
+   cout &lt;&lt; &quot;Hello World&quot;; // prints Hello World
+   
+   return 0;
+}</pre>
+
+<p>When the above code is compiled, it will ignore&nbsp;<strong>// prints Hello World</strong>&nbsp;and final executable will produce the following result &minus;</p>
+
+<pre>
+Hello World
+</pre>
+
+<p>Within a /* and */ comment, // characters have no special meaning. Within a // comment, /* and */ have no special meaning. Thus, you can &quot;nest&quot; one kind of comment within the other kind. For example &minus;</p>
+
+<pre>
+/* Comment out printing of Hello World:
+
+cout &lt;&lt; &quot;Hello World&quot;; // prints Hello World
+
+*/
+</pre>
+
+<h1>C++ Data Types</h1>
+
+<p>While writing program in any language, you need to use various variables to store various information. Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.</p>
+
+<p>You may like to store information of various data types like character, wide character, integer, floating point, double floating point, boolean etc. Based on the data type of a variable, the operating system allocates memory and decides what can be stored in the reserved memory.</p>
+
+<h2>Primitive Built-in Types</h2>
+
+<p>C++ offers the programmer a rich assortment of built-in as well as user defined data types. Following table lists down seven basic C++ data types &minus;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th width="50%">Type</th>
+			<th>Keyword</th>
+		</tr>
+		<tr>
+			<td>Boolean</td>
+			<td>bool</td>
+		</tr>
+		<tr>
+			<td>Character</td>
+			<td>char</td>
+		</tr>
+		<tr>
+			<td>Integer</td>
+			<td>int</td>
+		</tr>
+		<tr>
+			<td>Floating point</td>
+			<td>float</td>
+		</tr>
+		<tr>
+			<td>Double floating point</td>
+			<td>double</td>
+		</tr>
+		<tr>
+			<td>Valueless</td>
+			<td>void</td>
+		</tr>
+		<tr>
+			<td>Wide character</td>
+			<td>wchar_t</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Several of the basic types can be modified using one or more of these type modifiers &minus;</p>
+
+<ul>
+	<li>signed</li>
+	<li>unsigned</li>
+	<li>short</li>
+	<li>long</li>
+</ul>
+
+<p>The following table shows the variable type, how much memory it takes to store the value in memory, and what is maximum and minimum value which can be stored in such type of variables.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Type</th>
+			<th>Typical Bit Width</th>
+			<th>Typical Range</th>
+		</tr>
+		<tr>
+			<td>char</td>
+			<td>1byte</td>
+			<td>-127 to 127 or 0 to 255</td>
+		</tr>
+		<tr>
+			<td>unsigned char</td>
+			<td>1byte</td>
+			<td>0 to 255</td>
+		</tr>
+		<tr>
+			<td>signed char</td>
+			<td>1byte</td>
+			<td>-127 to 127</td>
+		</tr>
+		<tr>
+			<td>int</td>
+			<td>4bytes</td>
+			<td>-2147483648 to 2147483647</td>
+		</tr>
+		<tr>
+			<td>unsigned int</td>
+			<td>4bytes</td>
+			<td>0 to 4294967295</td>
+		</tr>
+		<tr>
+			<td>signed int</td>
+			<td>4bytes</td>
+			<td>-2147483648 to 2147483647</td>
+		</tr>
+		<tr>
+			<td>short int</td>
+			<td>2bytes</td>
+			<td>-32768 to 32767</td>
+		</tr>
+		<tr>
+			<td>unsigned short int</td>
+			<td>2bytes</td>
+			<td>0 to 65,535</td>
+		</tr>
+		<tr>
+			<td>signed short int</td>
+			<td>2bytes</td>
+			<td>-32768 to 32767</td>
+		</tr>
+		<tr>
+			<td>long int</td>
+			<td>8bytes</td>
+			<td>-2,147,483,648 to 2,147,483,647</td>
+		</tr>
+		<tr>
+			<td>signed long int</td>
+			<td>8bytes</td>
+			<td>same as long int</td>
+		</tr>
+		<tr>
+			<td>unsigned long int</td>
+			<td>8bytes</td>
+			<td>0 to 4,294,967,295</td>
+		</tr>
+		<tr>
+			<td>long long int</td>
+			<td>8bytes</td>
+			<td>-(2^63) to (2^63)-1</td>
+		</tr>
+		<tr>
+			<td>unsigned long long int</td>
+			<td>8bytes</td>
+			<td>0 to 18,446,744,073,709,551,615</td>
+		</tr>
+		<tr>
+			<td>float</td>
+			<td>4bytes</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>double</td>
+			<td>8bytes</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>long double</td>
+			<td>12bytes</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>wchar_t</td>
+			<td>2 or 4 bytes</td>
+			<td>1 wide character</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The size of variables might be different from those shown in the above table, depending on the compiler and the computer you are using.</p>
+
+<h1>C++ Variable Types</h1>
+
+<p>A variable provides us with named storage that our programs can manipulate. Each variable in C++ has a specific type, which determines the size and layout of the variable&#39;s memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.</p>
+
+<p>The name of a variable can be composed of letters, digits, and the underscore character. It must begin with either a letter or an underscore. Upper and lowercase letters are distinct because C++ is case-sensitive &minus;</p>
+
+<p>There are following basic types of variable in C++ as explained in last chapter &minus;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Type &amp; Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>
+			<p><strong>bool</strong></p>
+
+			<p>Stores either value true or false.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>
+			<p><strong>char</strong></p>
+
+			<p>Typically a single octet (one byte). This is an integer type.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>
+			<p><strong>int</strong></p>
+
+			<p>The most natural size of integer for the machine.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>
+			<p><strong>float</strong></p>
+
+			<p>A single-precision floating point value.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>
+			<p><strong>double</strong></p>
+
+			<p>A double-precision floating point value.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>
+			<p><strong>void</strong></p>
+
+			<p>Represents the absence of type.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>
+			<p><strong>wchar_t</strong></p>
+
+			<p>A wide character type.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h1>Operators in C++</h1>
+
+<p>&nbsp;</p>
+
+<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical manipulations. C++ is rich in built-in operators and provide the following types of operators &minus;</p>
+
+<ul>
+	<li>Arithmetic Operators</li>
+	<li>Relational Operators</li>
+	<li>Logical Operators</li>
+	<li>Bitwise Operators</li>
+	<li>Assignment Operators</li>
+	<li>Misc Operators</li>
+</ul>
+
+<h1>Loop Types</h1>
+
+<p>There may be a situation, when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</p>
+
+<p>Programming languages provide various control structures that allow for more complicated execution paths.</p>
+
+<p>A loop statement allows us to execute a statement or group of statements multiple times and following is the general from of a loop statement in most of the programming languages &minus;</p>
+<img alt="Loop Architecture" src="https://www.tutorialspoint.com/cplusplus/images/loop_architecture.jpg" />
+<p>C++ programming language provides the following type of loops to handle looping requirements.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Loop Type &amp; Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_while_loop.htm" title="C++ while loop">while loop</a>
+			<p>Repeats a statement or group of statements while a given condition is true. It tests the condition before executing the loop body.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_for_loop.htm" title="C++ for loop">for loop</a>
+			<p>Execute a sequence of statements multiple times and abbreviates the code that manages the loop variable.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_do_while_loop.htm" title="C++ do...while loop">do...while loop</a>
+			<p>Like a &lsquo;while&rsquo; statement, except that it tests the condition at the end of the loop body.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_nested_loops.htm" title="C++ nested loops">nested loops</a>
+			<p>You can use one or more loop inside any another &lsquo;while&rsquo;, &lsquo;for&rsquo; or &lsquo;do..while&rsquo; loop.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Loop Control Statements</h2>
+
+<p>Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed.</p>
+
+<p>C++ supports the following control statements.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Control Statement &amp; Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_break_statement.htm" title="C++ break statement">break statement</a>
+			<p>Terminates the&nbsp;<strong>loop</strong>&nbsp;or&nbsp;<strong>switch</strong>&nbsp;statement and transfers execution to the statement immediately following the loop or switch.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_continue_statement.htm" title="C++ continue statement">continue statement</a>
+			<p>Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_goto_statement.htm" title="C++ goto statement">goto statement</a>
+			<p>Transfers control to the labeled statement. Though it is not advised to use goto statement in your program.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p><span style="font-size:22px">Decision making</span></p>
+
+<p>Decision making structures require that the programmer specify one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p>
+
+<p>Following is the general form of a typical decision making structure found in most of the programming languages &minus;</p>
+<img alt="C++ decision making" src="https://www.tutorialspoint.com/cplusplus/images/cpp_decision_making.jpg" />
+<p>C++ programming language provides following types of decision making statements.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Statement &amp; Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_if_statement.htm" title="C++ if statement">if statement</a>
+			<p>An &lsquo;if&rsquo; statement consists of a boolean expression followed by one or more statements.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_if_else_statement.htm" title="C++ if...else statement">if...else statement</a>
+			<p>An &lsquo;if&rsquo; statement can be followed by an optional &lsquo;else&rsquo; statement, which executes when the boolean expression is false.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_switch_statement.htm" title="C++ switch statement">switch statement</a>
+			<p>A &lsquo;switch&rsquo; statement allows a variable to be tested for equality against a list of values.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_nested_if.htm" title="C++ nested if statements">nested if statements</a>
+			<p>You can use one &lsquo;if&rsquo; or &lsquo;else if&rsquo; statement inside another &lsquo;if&rsquo; or &lsquo;else if&rsquo; statement(s).</p>
+			</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_nested_switch.htm" title="C++ nested switch statements">nested switch statements</a>
+			<p>You can use one &lsquo;switch&rsquo; statement inside another &lsquo;switch&rsquo; statement(s).</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h1>Functions</h1>
+
+<p>A function is a group of statements that together perform a task. Every C++ program has at least one function, which is&nbsp;<strong>main()</strong>, and all the most trivial programs can define additional functions.</p>
+
+<p>You can divide up your code into separate functions. How you divide up your code among different functions is up to you, but logically the division usually is such that each function performs a specific task.</p>
+
+<p>A function&nbsp;<strong>declaration</strong>&nbsp;tells the compiler about a function&#39;s name, return type, and parameters. A function&nbsp;<strong>definition</strong>&nbsp;provides the actual body of the function.</p>
+
+<p>The C++ standard library provides numerous built-in functions that your program can call. For example, function&nbsp;<strong>strcat()</strong>&nbsp;to concatenate two strings, function&nbsp;<strong>memcpy()</strong>&nbsp;to copy one memory location to another location and many more functions.</p>
+
+<p>A function is known with various names like a method or a sub-routine or a procedure etc.</p>
+
+<h2>Defining a Function</h2>
+
+<p>The general form of a C++ function definition is as follows &minus;</p>
+
+<pre>
+return_type function_name( parameter list ) {
+   body of the function
+}
+</pre>
+
+<p>A C++ function definition consists of a function header and a function body. Here are all the parts of a function &minus;</p>
+
+<ul>
+	<li>
+	<p><strong>Return Type</strong>&nbsp;&minus; A function may return a value. The&nbsp;<strong>return_type</strong>&nbsp;is the data type of the value the function returns. Some functions perform the desired operations without returning a value. In this case, the return_type is the keyword&nbsp;<strong>void</strong>.</p>
+	</li>
+	<li>
+	<p><strong>Function Name</strong>&nbsp;&minus; This is the actual name of the function. The function name and the parameter list together constitute the function signature.</p>
+	</li>
+	<li>
+	<p><strong>Parameters</strong>&nbsp;&minus; A parameter is like a placeholder. When a function is invoked, you pass a value to the parameter. This value is referred to as actual parameter or argument. The parameter list refers to the type, order, and number of the parameters of a function. Parameters are optional; that is, a function may contain no parameters.</p>
+	</li>
+	<li>
+	<p><strong>Function Body</strong>&nbsp;&minus; The function body contains a collection of statements that define what the function does.</p>
+	</li>
+</ul>
+
+<h1>Arrays</h1>
+
+<p>C++ provides a data structure,&nbsp;<strong>the array</strong>, which stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type.</p>
+
+<p>Instead of declaring individual variables, such as number0, number1, ..., and number99, you declare one array variable such as numbers and use numbers[0], numbers[1], and ..., numbers[99] to represent individual variables. A specific element in an array is accessed by an index.</p>
+
+<p>All arrays consist of contiguous memory locations. The lowest address corresponds to the first element and the highest address to the last element.</p>
+
+<h1>Pointers</h1>
+
+<p>C++ pointers are easy and fun to learn. Some C++ tasks are performed more easily with pointers, and other C++ tasks, such as dynamic memory allocation, cannot be performed without them.</p>
+
+<p>As you know every variable is a memory location and every memory location has its address defined which can be accessed using ampersand (&amp;) operator which denotes an address in memory. Consider the following which will print the address of the variables defined &minus;</p>
+
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+int main () {
+   int  var1;
+   char var2[10];
+
+   cout &lt;&lt; &quot;Address of var1 variable: &quot;;
+   cout &lt;&lt; &amp;var1 &lt;&lt; endl;
+
+   cout &lt;&lt; &quot;Address of var2 variable: &quot;;
+   cout &lt;&lt; &amp;var2 &lt;&lt; endl;
+
+   return 0;
+}</pre>
+
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+
+<pre>
+Address of var1 variable: 0xbfebd5c0
+Address of var2 variable: 0xbfebd5b6</pre>
+
+<p>&nbsp;</p>
+
+<h1>Classes and Objects</h1>
+
+<p>The main purpose of C++ programming is to add object orientation to the C programming language and classes are the central feature of C++ that supports object-oriented programming and are often called user-defined types.</p>
+
+<p>A class is used to specify the form of an object and it combines data representation and methods for manipulating that data into one neat package. The data and functions within a class are called members of the class.</p>
+
+<h2>C++ Class Definitions</h2>
+
+<p>When you define a class, you define a blueprint for a data type. This doesn&#39;t actually define any data, but it does define what the class name means, that is, what an object of the class will consist of and what operations can be performed on such an object.</p>
+
+<p>A class definition starts with the keyword&nbsp;<strong>class</strong>&nbsp;followed by the class name; and the class body, enclosed by a pair of curly braces. A class definition must be followed either by a semicolon or a list of declarations. For example, we defined the Box data type using the keyword&nbsp;<strong>class</strong>&nbsp;as follows &minus;</p>
+
+<pre>
+class Box {
+   public:
+      double length;   // Length of a box
+      double breadth;  // Breadth of a box
+      double height;   // Height of a box
+};
+</pre>
+
+<p>The keyword&nbsp;<strong>public</strong>&nbsp;determines the access attributes of the members of the class that follows it. A public member can be accessed from outside the class anywhere within the scope of the class object. You can also specify the members of a class as&nbsp;<strong>private</strong>&nbsp;or&nbsp;<strong>protected</strong>&nbsp;which we will discuss in a sub-section.</p>
+
+<h2>Define C++ Objects</h2>
+
+<p>A class provides the blueprints for objects, so basically an object is created from a class. We declare objects of a class with exactly the same sort of declaration that we declare variables of basic types. Following statements declare two objects of class Box &minus;</p>
+
+<pre>
+Box Box1;          // Declare Box1 of type Box
+Box Box2;          // Declare Box2 of type Box
+</pre>
+
+<p>Both of the objects Box1 and Box2 will have their own copy of data members.</p>
+
+<h2>Accessing the Data Members</h2>
+
+<p>The public data members of objects of a class can be accessed using the direct member access operator (.).</p>
+
+<h2>Classes and Objects in Detail</h2>
+
+<p>So far, you have got very basic idea about C++ Classes and Objects. There are further interesting concepts related to C++ Classes and Objects which we will discuss in various sub-sections listed below &minus;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Concept &amp; Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_class_member_functions.htm" title="C++ Class Member Functions">Class Member Functions</a>
+			<p>A member function of a class is a function that has its definition or its prototype within the class definition like any other variable.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_class_access_modifiers.htm" title="C++ Class Access Modifiers">Class Access Modifiers</a>
+			<p>A class member can be defined as public, private or protected. By default members would be assumed as private.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_constructor_destructor.htm" title="C++ Constructor &amp; Destructor">Constructor &amp; Destructor</a>
+			<p>A class constructor is a special function in a class that is called when a new object of the class is created. A destructor is also a special function which is called when created object is deleted.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm" title="C++ Copy Constructor">Copy Constructor</a>
+			<p>The copy constructor is a constructor which creates an object by initializing it with an object of the same class, which has been created previously.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_friend_functions.htm" title="C++ Friend Functions">Friend Functions</a>
+			<p>A&nbsp;<strong>friend</strong>&nbsp;function is permitted full access to private and protected members of a class.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_inline_functions.htm" title="C++ Inline Functions">Inline Functions</a>
+			<p>With an inline function, the compiler tries to expand the code in the body of the function in place of a call to the function.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_this_pointer.htm" title="The this Pointer in C++">this Pointer</a>
+			<p>Every object has a special pointer&nbsp;<strong>this</strong>&nbsp;which points to the object itself.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_pointer_to_class.htm" title="Pointer to C++ Classes">Pointer to C++ Classes</a>
+			<p>A pointer to a class is done exactly the same way a pointer to a structure is. In fact a class is really just a structure with functions in it.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td><a href="https://www.tutorialspoint.com/cplusplus/cpp_static_members.htm" title="Static members of a class">Static Members of a Class</a>
+			<p>Both data members and function members of a class can be declared as static.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<h1>Inheritance</h1>
+
+<h2>Access Control and Inheritance</h2>
+
+<p>A derived class can access all the non-private members of its base class. Thus base-class members that should not be accessible to the member functions of derived classes should be declared private in the base class.</p>
+
+<p>We can summarize the different access types according to - who can access them in the following way &minus;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th width="25%">Access</th>
+			<th width="25%">public</th>
+			<th width="25%">protected</th>
+			<th width="25%">private</th>
+		</tr>
+		<tr>
+			<td>Same class</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>yes</td>
+		</tr>
+		<tr>
+			<td>Derived classes</td>
+			<td>yes</td>
+			<td>yes</td>
+			<td>no</td>
+		</tr>
+		<tr>
+			<td>Outside classes</td>
+			<td>yes</td>
+			<td>no</td>
+			<td>no</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>A derived class inherits all base class methods with the following exceptions &minus;</p>
+
+<ul>
+	<li>Constructors, destructors and copy constructors of the base class.</li>
+	<li>Overloaded operators of the base class.</li>
+	<li>The friend functions of the base class.</li>
+</ul>
+
+<h2>Type of Inheritance</h2>
+
+<p>When deriving a class from a base class, the base class may be inherited through&nbsp;<strong>public, protected</strong>&nbsp;or&nbsp;<strong>private</strong>&nbsp;inheritance. The type of inheritance is specified by the access-specifier as explained above.</p>
+
+<p>We hardly use&nbsp;<strong>protected</strong>&nbsp;or&nbsp;<strong>private</strong>&nbsp;inheritance, but&nbsp;<strong>public</strong>&nbsp;inheritance is commonly used. While using different type of inheritance, following rules are applied &minus;</p>
+
+<ul>
+	<li>
+	<p><strong>Public Inheritance</strong>&nbsp;&minus; When deriving a class from a&nbsp;<strong>public</strong>&nbsp;base class,&nbsp;<strong>public</strong>&nbsp;members of the base class become&nbsp;<strong>public</strong>&nbsp;members of the derived class and&nbsp;<strong>protected</strong>&nbsp;members of the base class become&nbsp;<strong>protected</strong>&nbsp;members of the derived class. A base class&#39;s&nbsp;<strong>private</strong>&nbsp;members are never accessible directly from a derived class, but can be accessed through calls to the&nbsp;<strong>public</strong>&nbsp;and&nbsp;<strong>protected</strong>&nbsp;members of the base class.</p>
+	</li>
+	<li>
+	<p><strong>Protected Inheritance</strong>&nbsp;&minus; When deriving from a&nbsp;<strong>protected</strong>&nbsp;base class,&nbsp;<strong>public</strong>&nbsp;and&nbsp;<strong>protected</strong>&nbsp;members of the base class become&nbsp;<strong>protected</strong>&nbsp;members of the derived class.</p>
+	</li>
+	<li>
+	<p><strong>Private Inheritance</strong>&nbsp;&minus; When deriving from a&nbsp;<strong>private</strong>&nbsp;base class,&nbsp;<strong>public</strong>&nbsp;and&nbsp;<strong>protected</strong>&nbsp;members of the base class become&nbsp;<strong>private</strong>&nbsp;members of the derived class.</p>
+	</li>
+</ul>
+
+<h1>Polymorphism</h1>
+
+<p>The word&nbsp;<strong>polymorphism</strong>&nbsp;means having many forms. Typically, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance.</p>
+
+<p>C++ polymorphism means that a call to a member function will cause a different function to be executed depending on the type of object that invokes the function.</p>
+
+<h2>Virtual Function</h2>
+
+<p>A&nbsp;<strong>virtual</strong>&nbsp;function is a function in a base class that is declared using the keyword&nbsp;<strong>virtual</strong>. Defining in a base class a virtual function, with another version in a derived class, signals to the compiler that we don&#39;t want static linkage for this function.</p>
+
+<p>What we do want is the selection of the function to be called at any given point in the program to be based on the kind of object for which it is called. This sort of operation is referred to as&nbsp;<strong>dynamic linkage</strong>, or&nbsp;<strong>late binding</strong>.</p>
+
+<h2>Pure Virtual Functions</h2>
+
+<p>It is possible that you want to include a virtual function in a base class so that it may be redefined in a derived class to suit the objects of that class, but that there is no meaningful definition you could give for the function in the base class.</p>
+
+<p>We can change the virtual function area() in the base class to the following &minus;</p>
+
+<pre>
+class Shape {
+   protected:
+      int width, height;
+
+   public:
+      Shape(int a = 0, int b = 0) {
+         width = a;
+         height = b;
+      }
+      
+      // pure virtual function
+      virtual int area() = 0;
+};
+</pre>
+
+<p>The = 0 tells the compiler that the function has no body and above virtual function will be called&nbsp;<strong>pure virtual function</strong>.</p>
+
+<p>&nbsp;</p>
+
+<h1>Data Abstraction</h1>
+
+<p>&nbsp;</p>
+
+<p>Data abstraction refers to providing only essential information to the outside world and hiding their background details, i.e., to represent the needed information in program without presenting the details.</p>
+
+<p>Data abstraction is a programming (and design) technique that relies on the separation of interface and implementation.</p>
+
+<p>Let&#39;s take one real life example of a TV, which you can turn on and off, change the channel, adjust the volume, and add external components such as speakers, VCRs, and DVD players, BUT you do not know its internal details, that is, you do not know how it receives signals over the air or through a cable, how it translates them, and finally displays them on the screen.</p>
+
+<p>Thus, we can say a television clearly separates its internal implementation from its external interface and you can play with its interfaces like the power button, channel changer, and volume control without having any knowledge of its internals.</p>
+
+<p>In C++, classes provides great level of&nbsp;<strong>data abstraction</strong>. They provide sufficient public methods to the outside world to play with the functionality of the object and to manipulate object data, i.e., state without actually knowing how class has been implemented internally.</p>
+
+<p>For example, your program can make a call to the&nbsp;<strong>sort()</strong>&nbsp;function without knowing what algorithm the function actually uses to sort the given values. In fact, the underlying implementation of the sorting functionality could change between releases of the library, and as long as the interface stays the same, your function call will still work.</p>
+
+<h1>Data Encapsulation</h1>
+
+<p>All C++ programs are composed of the following two fundamental elements &minus;</p>
+
+<ul>
+	<li>
+	<p><strong>Program statements (code)</strong>&nbsp;&minus; This is the part of a program that performs actions and they are called functions.</p>
+	</li>
+	<li>
+	<p><strong>Program data</strong>&nbsp;&minus; The data is the information of the program which gets affected by the program functions.</p>
+	</li>
+</ul>
+
+<p>Encapsulation is an Object Oriented Programming concept that binds together the data and functions that manipulate the data, and that keeps both safe from outside interference and misuse. Data encapsulation led to the important OOP concept of&nbsp;<strong>data hiding</strong>.</p>
+
+<p><strong>Data encapsulation</strong>&nbsp;is a mechanism of bundling the data, and the functions that use them and&nbsp;<strong>data abstraction</strong>&nbsp;is a mechanism of exposing only the interfaces and hiding the implementation details from the user.</p>
+
+<p>C++ supports the properties of encapsulation and data hiding through the creation of user-defined types, called&nbsp;<strong>classes</strong>. We already have studied that a class can contain&nbsp;<strong>private, protected&nbsp;</strong>and&nbsp;<strong>public</strong>&nbsp;members. By default, all items defined in a class are private. For example &minus;</p>
+
+<pre>
+class Box {
+   public:
+      double getVolume(void) {
+         return length * breadth * height;
+      }
+
+   private:
+      double length;      // Length of a box
+      double breadth;     // Breadth of a box
+      double height;      // Height of a box
+};
+</pre>
+
+<p>The variables length, breadth, and height are&nbsp;<strong>private</strong>. This means that they can be accessed only by other members of the Box class, and not by any other part of your program. This is one way encapsulation is achieved.</p>
+
+<p>To make parts of a class&nbsp;<strong>public</strong>&nbsp;(i.e., accessible to other parts of your program), you must declare them after the&nbsp;<strong>public</strong>&nbsp;keyword. All variables or functions defined after the public specifier are accessible by all other functions in your program.</p>
+
+<p>Making one class a friend of another exposes the implementation details and reduces encapsulation. The ideal is to keep as many of the details of each class hidden from all other classes as possible.</p>
+
+<p>&nbsp;</p>
+
+<h1>Interfaces in C++ (Abstract Classes)</h1>
+
+<p>An interface describes the behavior or capabilities of a C++ class without committing to a particular implementation of that class.</p>
+
+<p>The C++ interfaces are implemented using&nbsp;<strong>abstract classes</strong>&nbsp;and these abstract classes should not be confused with data abstraction which is a concept of keeping implementation details separate from associated data.</p>
+
+<p>A class is made abstract by declaring at least one of its functions as&nbsp;<strong>pure virtual</strong>&nbsp;function. A pure virtual function is specified by placing &quot;= 0&quot; in its declaration as follows &minus;</p>
+
+<pre>
+class Box {
+   public:
+      // pure virtual function
+      virtual double getVolume() = 0;
+      
+   private:
+      double length;      // Length of a box
+      double breadth;     // Breadth of a box
+      double height;      // Height of a box
+};
+</pre>
+
+<p>The purpose of an&nbsp;<strong>abstract class</strong>&nbsp;(often referred to as an ABC) is to provide an appropriate base class from which other classes can inherit. Abstract classes cannot be used to instantiate objects and serves only as an&nbsp;<strong>interface</strong>. Attempting to instantiate an object of an abstract class causes a compilation error.</p>
+
+<p>Thus, if a subclass of an ABC needs to be instantiated, it has to implement each of the virtual functions, which means that it supports the interface declared by the ABC. Failure to override a pure virtual function in a derived class, then attempting to instantiate objects of that class, is a compilation error.</p>
+
+<p>Classes that can be used to instantiate objects are called&nbsp;<strong>concrete classes</strong>.</p>
+
+<p>&nbsp;</p>
+
+<h1>&nbsp;Exception Handling</h1>
+
+<p>&nbsp;</p>
+
+<p>An exception is a problem that arises during the execution of a program. A C++ exception is a response to an exceptional circumstance that arises while a program is running, such as an attempt to divide by zero.</p>
+
+<p>Exceptions provide a way to transfer control from one part of a program to another. C++ exception handling is built upon three keywords:&nbsp;<strong>try, catch,</strong>&nbsp;and&nbsp;<strong>throw</strong>.</p>
+
+<ul>
+	<li>
+	<p><strong>throw</strong>&nbsp;&minus; A program throws an exception when a problem shows up. This is done using a&nbsp;<strong>throw</strong>&nbsp;keyword.</p>
+	</li>
+	<li>
+	<p><strong>catch</strong>&nbsp;&minus; A program catches an exception with an exception handler at the place in a program where you want to handle the problem. The&nbsp;<strong>catch</strong>&nbsp;keyword indicates the catching of an exception.</p>
+	</li>
+	<li>
+	<p><strong>try</strong>&nbsp;&minus; A&nbsp;<strong>try</strong>&nbsp;block identifies a block of code for which particular exceptions will be activated. It&#39;s followed by one or more catch blocks.</p>
+	</li>
+</ul>
+
+<p>Assuming a block will raise an exception, a method catches an exception using a combination of the&nbsp;<strong>try</strong>&nbsp;and&nbsp;<strong>catch</strong>&nbsp;keywords. A try/catch block is placed around the code that might generate an exception. Code within a try/catch block is referred to as protected code, and the syntax for using try/catch as follows &minus;</p>
+
+<pre>
+try {
+   // protected code
+} catch( ExceptionName e1 ) {
+   // catch block
+} catch( ExceptionName e2 ) {
+   // catch block
+} catch( ExceptionName eN ) {
+   // catch block
+}
+</pre>
+
+<p>You can list down multiple&nbsp;<strong>catch</strong>&nbsp;statements to catch different type of exceptions in case your&nbsp;<strong>try</strong>&nbsp;block raises more than one exception in different situations.</p>
+
+<h2>Throwing Exceptions</h2>
+
+<p>Exceptions can be thrown anywhere within a code block using&nbsp;<strong>throw</strong>&nbsp;statement. The operand of the throw statement determines a type for the exception and can be any expression and the type of the result of the expression determines the type of exception thrown.</p>
+
+<p>Following is an example of throwing an exception when dividing by zero condition occurs &minus;</p>
+
+<pre>
+double division(int a, int b) {
+   if( b == 0 ) {
+      throw &quot;Division by zero condition!&quot;;
+   }
+   return (a/b);
+}
+</pre>
+
+<h2>Catching Exceptions</h2>
+
+<p>The&nbsp;<strong>catch</strong>&nbsp;block following the&nbsp;<strong>try</strong>&nbsp;block catches any exception. You can specify what type of exception you want to catch and this is determined by the exception declaration that appears in parentheses following the keyword catch.</p>
+
+<pre>
+try {
+   // protected code
+} catch( ExceptionName e ) {
+  // code to handle ExceptionName exception
+}
+</pre>
+
+<p>Above code will catch an exception of&nbsp;<strong>ExceptionName</strong>&nbsp;type. If you want to specify that a catch block should handle any type of exception that is thrown in a try block, you must put an ellipsis, ..., between the parentheses enclosing the exception declaration as follows &minus;</p>
+
+<pre>
+try {
+   // protected code
+} catch(...) {
+  // code to handle any exception
+}</pre>
+
+<h1>&nbsp;Multithreading</h1>
+
+<p>&nbsp;</p>
+
+<p>Multithreading is a specialized form of multitasking and a multitasking is the feature that allows your computer to run two or more programs concurrently. In general, there are two types of multitasking: process-based and thread-based.</p>
+
+<p>Process-based multitasking handles the concurrent execution of programs. Thread-based multitasking deals with the concurrent execution of pieces of the same program.</p>
+
+<p>A multithreaded program contains two or more parts that can run concurrently. Each part of such a program is called a thread, and each thread defines a separate path of execution.</p>
+
+<p>C++ does not contain any built-in support for multithreaded applications. Instead, it relies entirely upon the operating system to provide this feature.</p>
+
+<p>This tutorial assumes that you are working on Linux OS and we are going to write multi-threaded C++ program using POSIX. POSIX Threads, or Pthreads provides API which are available on many Unix-like POSIX systems such as FreeBSD, NetBSD, GNU/Linux, Mac OS X and Solaris.</p>
+
+<h2>Creating Threads</h2>
+
+<p>The following routine is used to create a POSIX thread &minus;</p>
+
+<pre>
+#include &lt;pthread.h&gt;
+pthread_create (thread, attr, start_routine, arg) 
+</pre>
+
+<p>Here,&nbsp;<strong>pthread_create</strong>&nbsp;creates a new thread and makes it executable. This routine can be called any number of times from anywhere within your code. Here is the description of the parameters &minus;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Sr.No</th>
+			<th>Parameter &amp; Description</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>
+			<p><strong>thread</strong></p>
+
+			<p>An opaque, unique identifier for the new thread returned by the subroutine.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>
+			<p><strong>attr</strong></p>
+
+			<p>An opaque attribute object that may be used to set thread attributes. You can specify a thread attributes object, or NULL for the default values.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>
+			<p><strong>start_routine</strong></p>
+
+			<p>The C++ routine that the thread will execute once it is created.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>
+			<p><strong>arg</strong></p>
+
+			<p>A single argument that may be passed to start_routine. It must be passed by reference as a pointer cast of type void. NULL may be used if no argument is to be passed.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The maximum number of threads that may be created by a process is implementation dependent. Once created, threads are peers, and may create other threads. There is no implied hierarchy or dependency between threads.</p>
+
+<h2>Terminating Threads</h2>
+
+<p>There is following routine which we use to terminate a POSIX thread &minus;</p>
+
+<pre>
+#include &lt;pthread.h&gt;
+pthread_exit (status) 
+</pre>
+
+<p>Here&nbsp;<strong>pthread_exit</strong>&nbsp;is used to explicitly exit a thread. Typically, the pthread_exit() routine is called after a thread has completed its work and is no longer required to exist.</p>
+
+<p>If main() finishes before the threads it has created, and exits with pthread_exit(), the other threads will continue to execute. Otherwise, they will be automatically terminated when main() finishes.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</form>

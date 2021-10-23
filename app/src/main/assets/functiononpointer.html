@@ -1,0 +1,63 @@
+<p style="text-align: center;"><strong>POINTERS</strong></p>
+<p><br></p>
+<p><strong>What are Pointers?</strong></p>
+<p>A pointer is a variable whose value is the address of another variable, i.e., direct address of the memory location. Like any variable or constant, you must declare a pointer before using it to store any variable address. The general form of a pointer variable declaration is &minus;</p>
+<p><br></p>
+<p><strong>type *var-name;</strong></p>
+<p>Here, type is the pointer&apos;s base type; it must be a valid C data type and var-name is the name of the pointer variable. The asterisk * used to declare a pointer is the same asterisk used for multiplication. However, in this statement the asterisk is being used to designate a variable as a pointer. Take a look at some of the valid pointer declarations &minus;</p>
+<p><br></p>
+<p>int &nbsp; &nbsp;*ip; &nbsp; &nbsp;/* pointer to an integer */</p>
+<p>double *dp; &nbsp; &nbsp;/* pointer to a double */</p>
+<p>float &nbsp;*fp; &nbsp; &nbsp;/* pointer to a float */</p>
+<p>char &nbsp; *ch &nbsp; &nbsp; /* pointer to a character */</p>
+<p>The actual data type of the value of all pointers, whether integer, float, character, or otherwise, is the same, a long hexadecimal number that represents a memory address. The only difference between pointers of different data types is the data type of the variable or constant that the pointer points to.</p>
+<p><br></p>
+<p><strong>How to Use Pointers?</strong></p>
+<p>There are a few important operations, which we will do with the help of pointers very frequently. (a) We define a pointer variable, (b) assign the address of a variable to a pointer and (c) finally access the value at the address available in the pointer variable. This is done by using unary operator * that returns the value of the variable located at the address specified by its operand. The following example makes use of these operations &minus;</p>
+<p><br></p>
+<p><br></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main () {</p>
+<p>&nbsp; &nbsp;int &nbsp;var = 20; &nbsp; /* actual variable declaration */</p>
+<p>&nbsp; &nbsp;int &nbsp;*ip; &nbsp; &nbsp; &nbsp; &nbsp;/* pointer variable declaration */</p>
+<p><br></p>
+<p>&nbsp; &nbsp;ip = &amp;var; &nbsp;/* store address of var in pointer variable*/</p>
+<p><br></p>
+<p>&nbsp; &nbsp;printf(&quot;Address of var variable: %x\n&quot;, &amp;var &nbsp;);</p>
+<p><br></p>
+<p>&nbsp; &nbsp;/* address stored in pointer variable */</p>
+<p>&nbsp; &nbsp;printf(&quot;Address stored in ip variable: %x\n&quot;, ip );</p>
+<p><br></p>
+<p>&nbsp; &nbsp;/* access the value using the pointer */</p>
+<p>&nbsp; &nbsp;printf(&quot;Value of *ip variable: %d\n&quot;, *ip );</p>
+<p><br></p>
+<p>&nbsp; &nbsp;return 0;</p>
+<p>}</p>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<p><br></p>
+<p>Address of var variable: bffd8b3c</p>
+<p>Address stored in ip variable: bffd8b3c</p>
+<p>Value of *ip variable: 20</p>
+<p><br></p>
+<p><strong>NULL Pointers</strong></p>
+<p>It is always a good practice to assign a NULL value to a pointer variable in case you do not have an exact address to be assigned. This is done at the time of variable declaration. A pointer that is assigned NULL is called a null pointer.</p>
+<p><br></p>
+<p>The NULL pointer is a constant with a value of zero defined in several standard libraries. Consider the following program &minus;</p>
+<p><br></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>int main () {</p>
+<p>&nbsp; &nbsp;int &nbsp;*ptr = NULL;</p>
+<p>&nbsp; &nbsp;printf(&quot;The value of ptr is : %x\n&quot;, ptr &nbsp;);</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp;return 0;</p>
+<p>}</p>
+<p>When the above code is compiled and executed, it produces the following result &minus;</p>
+<p><br></p>
+<p>The value of ptr is 0</p>
+<p>In most of the operating systems, programs are not permitted to access memory at address 0 because that memory is reserved by the operating system. However, the memory address 0 has special significance; it signals that the pointer is not intended to point to an accessible memory location. But by convention, if a pointer contains the null (zero) value, it is assumed to point to nothing.</p>
+<p><br></p>
+<p>To check for a null pointer, you can use an &apos;if&apos; statement as follows &minus;</p>
+<p><br></p>
+<p>if(ptr) &nbsp; &nbsp; /* succeeds if p is not null */</p>
+<p>if(!ptr) &nbsp; &nbsp;/* succeeds if p is null */</p>
+<p><br></p>

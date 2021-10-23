@@ -1,0 +1,130 @@
+<p style="text-align: center;"><strong>&nbsp;ARRAY ON FUNCTIONS</strong></p>
+<p><br></p>
+<p><strong>Pass arrays to a function in C</strong></p>
+<p>In this tutorial, you&apos;ll learn to pass arrays (both one-dimensional and multidimensional arrays) to a function in C programming with the help of examples.</p>
+<p>In C programming, you can pass an entire array to functions. Before we learn that, let&apos;s see how you can pass individual elements of an array to functions.</p>
+<p><br></p>
+<p><strong>Pass Individual Array Elements</strong></p>
+<p>Passing array elements to a function is similar to passing variables to a function.</p>
+<p><br></p>
+<p><strong>Example 1:</strong> Pass Individual Array Elements</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>void display(int age1, int age2) {</p>
+<p>&nbsp; printf(&quot;%d\n&quot;, age1);</p>
+<p>&nbsp; printf(&quot;%d\n&quot;, age2);</p>
+<p>}</p>
+<p><br></p>
+<p>int main() {</p>
+<p>&nbsp; int ageArray[] = {2, 8, 4, 12};</p>
+<p><br></p>
+<p>&nbsp; // pass second and third elements to display()</p>
+<p>&nbsp; display(ageArray[1], ageArray[2]);&nbsp;</p>
+<p>&nbsp; return 0;</p>
+<p>}</p>
+<p><strong>Output</strong></p>
+<p>8</p>
+<p>4</p>
+<p>Here, we have passed array parameters to the display() function in the same way we pass variables to a function.</p>
+<p><br></p>
+<p>// pass second and third elements to display()</p>
+<p>display(ageArray[1], ageArray[2]);</p>
+<p>We can see this in the function definition, where the function parameters are individual variables:</p>
+<p><br></p>
+<p>void display(int age1, int age2) {</p>
+<p>&nbsp; // code</p>
+<p>}</p>
+<p><br></p>
+<p><br></p>
+<p><strong>Example 2:</strong> Pass Arrays to Functions</p>
+<p>// Program to calculate the sum of array elements by passing to a function&nbsp;</p>
+<p><br></p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>float calculateSum(float num[]);</p>
+<p><br></p>
+<p>int main() {</p>
+<p>&nbsp; float result, num[] = {23.4, 55, 22.6, 3, 40.5, 18};</p>
+<p><br></p>
+<p>&nbsp; // num array is passed to calculateSum()</p>
+<p>&nbsp; result = calculateSum(num);&nbsp;</p>
+<p>&nbsp; printf(&quot;Result = %.2f&quot;, result);</p>
+<p>&nbsp; return 0;</p>
+<p>}</p>
+<p><br></p>
+<p>float calculateSum(float num[]) {</p>
+<p>&nbsp; float sum = 0.0;</p>
+<p><br></p>
+<p>&nbsp; for (int i = 0; i &lt; 6; ++i) {</p>
+<p>&nbsp; &nbsp; sum += num[i];</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; return sum;</p>
+<p>}</p>
+<p><br></p>
+<p><strong>Output</strong></p>
+<p>Result = 162.50</p>
+<p>To pass an entire array to a function, only the name of the array is passed as an argument.</p>
+<p><br></p>
+<p>result = calculateSum(num);</p>
+<p>However, notice the use of [] in the function definition.</p>
+<p><br></p>
+<p>float calculateSum(float num[]) {</p>
+<p>... ..</p>
+<p>}</p>
+<p>This informs the compiler that you are passing a one-dimensional array to the function.</p>
+<p><br></p>
+<p>Pass Multidimensional Arrays to a Function</p>
+<p>To pass multidimensional arrays to a function, only the name of the array is passed to the function (similar to one-dimensional arrays).</p>
+<p><br></p>
+<p><strong>Example 3:</strong> Pass two-dimensional arrays</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>void displayNumbers(int num[2][2]);</p>
+<p><br></p>
+<p>int main() {</p>
+<p>&nbsp; int num[2][2];</p>
+<p>&nbsp; printf(&quot;Enter 4 numbers:\n&quot;);</p>
+<p>&nbsp; for (int i = 0; i &lt; 2; ++i) {</p>
+<p>&nbsp; &nbsp; for (int j = 0; j &lt; 2; ++j) {</p>
+<p>&nbsp; &nbsp; &nbsp; scanf(&quot;%d&quot;, &amp;num[i][j]);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; }</p>
+<p><br></p>
+<p>&nbsp; // pass multi-dimensional array to a function</p>
+<p>&nbsp; displayNumbers(num);</p>
+<p><br></p>
+<p>&nbsp; return 0;</p>
+<p>}</p>
+<p><br></p>
+<p>void displayNumbers(int num[2][2]) {</p>
+<p>&nbsp; printf(&quot;Displaying:\n&quot;);</p>
+<p>&nbsp; for (int i = 0; i &lt; 2; ++i) {</p>
+<p>&nbsp; &nbsp; for (int j = 0; j &lt; 2; ++j) {</p>
+<p>&nbsp; &nbsp; &nbsp; printf(&quot;%d\n&quot;, num[i][j]);</p>
+<p>&nbsp; &nbsp; }</p>
+<p>&nbsp; }</p>
+<p>}</p>
+<p><br></p>
+<p><strong>Output</strong></p>
+<p>Enter 4 numbers:</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>Displaying:</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<p>5</p>
+<p>Notice the parameter int num[2][2] in the function prototype and function definition:</p>
+<p><br></p>
+<p>// function prototype</p>
+<p>void displayNumbers(int num[2][2]);</p>
+<p>This signifies that the function takes a two-dimensional array as an argument. We can also pass arrays with more than 2 dimensions as a function argument.</p>
+<p><br></p>
+<p>When passing two-dimensional arrays, it is not mandatory to specify the number of rows in the array. However, the number of columns should always be specified.</p>
+<p><br></p>
+<p><strong>For example,</strong></p>
+<p><br></p>
+<p>void displayNumbers(int num[][2]) {</p>
+<p>&nbsp; // code</p>
+<p>}</p>
+<p><br></p>

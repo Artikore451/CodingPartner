@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".MegaQuiz"
+            android:exported="true" />
+        <activity
+            android:name=".Available"
+            android:exported="true" />
+        <activity
+            android:name=".Demo"
+            android:exported="true" />
+        <activity
+            android:name=".description"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_union"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_filehandling"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_structure"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_string"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_pointers"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_array"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_function"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_switch"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_if"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_nestedifelse"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_ifelseif"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_ifelse"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_dowhile"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_while"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_for"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_logical_operator"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_arithmatic_operator"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_sizeof_operator"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_relational_operator"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_ternary_operator"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_datatype"
+            android:exported="true" />
+        <activity
+            android:name=".c_program_helloworld"
+            android:exported="true" />
+        <activity
+            android:name=".c_program"
+            android:exported="true" />
+        <activity
+            android:name=".cppcertificate"
+            android:exported="true" />
+        <activity
+            android:name=".CPP_Notes"
+            android:exported="true" />
+        <activity
+            android:name=".cpp_intro"
+            android:exported="true" />
+        <activity
+            android:name=".Cpp_Indroduction"
+            android:exported="true" />
+        <activity
+            android:name=".CPP_Home"
+            android:exported="true" />
+        <activity
+            android:name=".ProgressBar"
+            android:exported="true" />
+        <activity
+            android:name=".Certificate"
+            android:exported="true" />
+        <activity
+            android:name=".FileHandling"
+            android:exported="true" />
+        <activity
+            android:name=".C_Note"
+            android:exported="true" />
+        <activity
+            android:name=".Stringsinc"
+            android:exported="true" />
+        <activity
+            android:name=".Structure"
+            android:exported="true" />
+        <activity
+            android:name=".FunctionOnPointer"
+            android:exported="true" />
+        <activity
+            android:name=".pointers"
+            android:exported="true" />
+        <activity
+            android:name=".RecursiveFunction"
+            android:exported="true" />
+        <activity
+            android:name=".Pointers"
+            android:exported="true" />
+        <activity
+            android:name=".FunctionOnArray"
+            android:exported="true" />
+        <activity
+            android:name=".TwoDArray"
+            android:exported="true" />
+        <activity
+            android:name=".Array"
+            android:exported="true" />
+        <activity
+            android:name=".Function"
+            android:exported="true" />
+        <activity
+            android:name=".Conditions"
+            android:exported="true" />
+        <activity
+            android:name=".Loop"
+            android:exported="true" />
+        <activity
+            android:name=".Operator"
+            android:exported="true" />
+        <activity
+            android:name=".dataType"
+            android:exported="true" />
+        <activity
+            android:name=".Keywords"
+            android:exported="true" />
+        <activity
+            android:name=".DataType"
+            android:exported="true" />
+        <activity
+            android:name=".C_Home"
+            android:exported="true" />
+        <activity
+            android:name=".Input"
+            android:exported="true" />
+        <activity
+            android:name=".C_Hello_World"
+            android:exported="true" />
+        <activity
+            android:name=".C_language"
+            android:exported="true" />
+        <activity
+            android:name=".ContactUs"
+            android:exported="true" />
+        <activity
+            android:name=".courses"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForgetPassword"
+            android:exported="true" />
+        <activity
+            android:name=".Registration"
+            android:exported="true" />
+        <activity
+            android:name=".Login_user"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

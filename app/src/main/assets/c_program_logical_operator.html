@@ -1,0 +1,34 @@
+<form name="Calc">
+<p style="text-align: center;"><strong>Logical operator-</strong></p>
+
+<p><br />
+// Working of logical operators</p>
+
+<p>#include &lt;stdio.h&gt;<br />
+int main()<br />
+{<br />
+&nbsp; &nbsp; int a = 5, b = 5, c = 10, result;</p>
+
+<p>&nbsp; &nbsp; result = (a == b) &amp;&amp; (c &gt; b);<br />
+&nbsp; &nbsp; printf(&quot;(a == b) &amp;&amp; (c &gt; b) is %d \n&quot;, result);</p>
+
+<p>&nbsp; &nbsp; result = (a == b) &amp;&amp; (c &lt; b);<br />
+&nbsp; &nbsp; printf(&quot;(a == b) &amp;&amp; (c &lt; b) is %d \n&quot;, result);</p>
+
+<p>&nbsp; &nbsp; result = (a == b) || (c &lt; b);<br />
+&nbsp; &nbsp; printf(&quot;(a == b) || (c &lt; b) is %d \n&quot;, result);</p>
+
+<p>&nbsp; &nbsp; result = (a != b) || (c &lt; b);<br />
+&nbsp; &nbsp; printf(&quot;(a != b) || (c &lt; b) is %d \n&quot;, result);</p>
+
+<p>&nbsp; &nbsp; result = !(a != b);<br />
+&nbsp; &nbsp; printf(&quot;!(a != b) is %d \n&quot;, result);</p>
+
+<p>&nbsp; &nbsp; result = !(a == b);<br />
+&nbsp; &nbsp; printf(&quot;!(a == b) is %d \n&quot;, result);</p>
+
+<p>&nbsp; &nbsp; return 0;<br />
+}</p>
+</form>
+
+<p>&nbsp;</p>
